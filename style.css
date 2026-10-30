@@ -1,0 +1,1362 @@
+
+/* =========================================
+   GRAMINRESUME - COMPLETE WEBSITE STYLING
+========================================= */
+
+:root {
+    --green: #16834b;
+    --dark-green: #105c36;
+    --light-green: #eaf6ee;
+    --pale-green: #f5faf6;
+    --dark: #183327;
+    --text: #53645a;
+    --muted: #87948c;
+    --border: #e3ebe5;
+    --white: #ffffff;
+    --shadow: 0 12px 35px rgba(28, 65, 43, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 18px rgba(20,60,35,0.05);
+}
+
+.nav-container {
+    max-width: 1250px;
+    min-height: 76px;
+    margin: auto;
+    padding: 10px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--dark);
+    white-space: nowrap;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--green);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.green {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    padding: 10px 0;
+    position: relative;
+    transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--green);
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--green);
+    border-radius: 4px;
+}
+
+.nav-button {
+    text-decoration: none;
+    background: var(--green);
+    color: white;
+    border-radius: 9px;
+    padding: 11px 17px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.nav-button:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: var(--light-green);
+    color: var(--green);
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-button,
+.secondary-button,
+.clear-button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 19px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: 0.25s;
+}
+
+.primary-button {
+    background: var(--green);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 17px rgba(22,131,75,0.2);
+}
+
+.secondary-button {
+    background: var(--light-green);
+    color: var(--green);
+    border: 1px solid #d6ebdc;
+}
+
+.secondary-button:hover {
+    background: #dcefe2;
+}
+
+.clear-button {
+    background: #fff0ef;
+    color: #c34d46;
+}
+
+.clear-button:hover {
+    background: #ffe2df;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 590px;
+    padding: 90px max(7%, calc((100% - 1150px)/2));
+    background:
+        radial-gradient(circle at 85% 25%, #d8f0df 0, transparent 32%),
+        linear-gradient(120deg, #f5fbf6, #ffffff);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.13;
+    letter-spacing: -2px;
+    margin-bottom: 23px;
+}
+
+.hero-content > p {
+    color: var(--text);
+    font-size: 16px;
+    max-width: 560px;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hero-points {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero-points span:first-child {
+    color: var(--green);
+}
+
+.hero-visual {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.visual-card {
+    width: min(350px, 100%);
+    min-height: 365px;
+    background: white;
+    padding: 28px;
+    border: 1px solid #e5eee7;
+    border-radius: 18px;
+    box-shadow: 0 25px 70px rgba(34,86,53,0.13);
+    transform: rotate(2deg);
+}
+
+.visual-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.visual-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--light-green);
+    color: var(--green);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.visual-top strong,
+.visual-top small {
+    display: block;
+}
+
+.visual-top strong {
+    font-size: 14px;
+}
+
+.visual-top small {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.verified {
+    margin-left: auto;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.visual-line {
+    height: 7px;
+    border-radius: 5px;
+    background: #e9eee9;
+    margin: 12px 0;
+}
+
+.visual-line.long { width: 100%; }
+.visual-line.medium { width: 72%; }
+.visual-line.short { width: 45%; }
+
+.visual-heading {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 23px;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.skill-pills span {
+    background: var(--light-green);
+    color: var(--dark-green);
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 9px;
+}
+
+.visual-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 23px;
+    padding-top: 12px;
+    font-size: 11px;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.floating-note {
+    position: absolute;
+    bottom: 20px;
+    right: -5px;
+    background: white;
+    color: var(--green);
+    padding: 13px 18px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =========================================
+   COMMON SECTION STYLING
+========================================= */
+
+.section {
+    padding: 85px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 37px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+    letter-spacing: -0.8px;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features-section {
+    background: white;
+}
+
+.feature-grid {
+    max-width: 1120px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 28px 22px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    transition: 0.25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: #b8dfc5;
+}
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--light-green);
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.feature-card p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   RESUME BUILDER
+========================================= */
+
+.builder-section {
+    background: var(--pale-green);
+}
+
+.builder-layout {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    align-items: start;
+    gap: 25px;
+}
+
+.resume-form,
+.sidebar-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(28,65,43,0.04);
+}
+
+.resume-form {
+    padding: 30px;
+}
+
+.form-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.form-heading h3 {
+    font-size: 21px;
+}
+
+.form-heading p,
+.form-step {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.form-step {
+    background: var(--light-green);
+    color: var(--green);
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.form-section {
+    padding: 23px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.form-section:last-of-type {
+    border-bottom: 0;
+}
+
+.form-section > h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.form-section > h3 span {
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+    background: var(--light-green);
+    color: var(--green);
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+.form-section label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-section input:not([type="checkbox"]),
+.form-section textarea,
+.sidebar-card select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dce6df;
+    border-radius: 8px;
+    background: white;
+    color: var(--dark);
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-section input:focus,
+.form-section textarea:focus,
+.sidebar-card select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(22,131,75,0.09);
+}
+
+.form-section input::placeholder,
+.form-section textarea::placeholder {
+    color: #a5afa8;
+}
+
+.form-section textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.helper-text {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 17px;
+}
+
+.skill-category {
+    margin-bottom: 19px;
+}
+
+.skill-category h4 {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.checkbox-grid label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--text);
+}
+
+.checkbox-grid input,
+.fresher-option input {
+    accent-color: var(--green);
+    width: 16px;
+    height: 16px;
+}
+
+.custom-skills-label {
+    margin-top: 20px;
+}
+
+.fresher-option {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 10px !important;
+    padding: 13px;
+    margin-bottom: 20px;
+    background: var(--pale-green);
+    border-radius: 8px;
+    font-weight: 600 !important;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 25px;
+}
+
+.builder-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-card {
+    padding: 23px;
+}
+
+.sidebar-card h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.sidebar-card > p {
+    color: var(--text);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.sidebar-card > label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.sidebar-card select {
+    cursor: pointer;
+}
+
+.template-mini-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.mini-template {
+    min-height: 110px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 12px 9px;
+    background: #fafcfb;
+}
+
+.mini-template div {
+    height: 12px;
+    width: 45%;
+    background: var(--green);
+    margin-bottom: 11px;
+}
+
+.mini-template span {
+    display: block;
+    width: 90%;
+    height: 4px;
+    background: #dce4de;
+    margin: 6px 0;
+}
+
+.mini-template span:nth-of-type(2) { width: 70%; }
+.mini-template span:nth-of-type(3) { width: 55%; }
+
+.mini-template small {
+    display: block;
+    margin-top: 9px;
+    color: var(--text);
+    font-size: 10px;
+}
+
+.modern-mini div { background: #16834b; }
+.executive-mini div { background: #19365c; }
+.creative-mini div { background: #a14e8d; }
+
+.sidebar-tip,
+.privacy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 17px;
+    padding: 15px;
+    border-radius: 11px;
+    background: #fff9e9;
+}
+
+.sidebar-tip > span,
+.privacy-note > span {
+    font-size: 21px;
+}
+
+.sidebar-tip strong {
+    font-size: 13px;
+}
+
+.sidebar-tip p,
+.privacy-note p {
+    color: var(--text);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.privacy-note {
+    background: #edf7f0;
+}
+
+/* =========================================
+   RESUME PREVIEW
+========================================= */
+
+.preview-section {
+    background: white;
+}
+
+.preview-toolbar {
+    max-width: 950px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.preview-toolbar strong {
+    font-size: 16px;
+}
+
+.preview-toolbar p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.preview-buttons {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.resume-preview {
+    max-width: 950px;
+    min-height: 650px;
+    margin: auto;
+    padding: 55px;
+    background: white;
+    border: 1px solid #e1e7e2;
+    box-shadow: 0 10px 35px rgba(20,50,30,0.07);
+}
+
+.empty-preview {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.empty-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    background: var(--light-green);
+    margin-bottom: 20px;
+}
+
+.empty-preview h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.empty-preview p {
+    max-width: 430px;
+    color: var(--text);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* Generated resume layout */
+
+.resume-document {
+    color: #242c27;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.resume-header {
+    padding-bottom: 22px;
+    border-bottom: 2px solid #16834b;
+    margin-bottom: 22px;
+}
+
+.resume-header h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.resume-role {
+    font-weight: 600;
+    color: #16834b;
+    margin-bottom: 8px;
+}
+
+.resume-contact {
+    color: #65736a;
+    font-size: 11px;
+}
+
+.resume-section {
+    margin: 22px 0;
+    page-break-inside: avoid;
+}
+
+.resume-section h3 {
+    color: #16834b;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #dfe8e1;
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+}
+
+.resume-section p {
+    font-size: 12px;
+    margin: 5px 0;
+    white-space: normal;
+}
+
+.resume-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    padding-left: 18px;
+}
+
+.resume-skills li {
+    font-size: 12px;
+}
+
+/* =========================================
+   SIX RESUME TEMPLATES
+========================================= */
+
+/* Classic */
+.classic-template .resume-header {
+    border-color: #16834b;
+}
+
+.classic-template .resume-section h3 {
+    color: #16834b;
+}
+
+/* Modern */
+.modern-template .resume-header {
+    background: #eaf6ee;
+    padding: 25px;
+    border-left: 6px solid #16834b;
+    border-bottom: 0;
+}
+
+.modern-template .resume-section h3 {
+    color: #16834b;
+}
+
+/* Simple */
+.simple-template .resume-header {
+    border-color: #333;
+}
+
+.simple-template .resume-header h1,
+.simple-template .resume-section h3,
+.simple-template .resume-role {
+    color: #222;
+}
+
+.simple-template .resume-section h3 {
+    border-color: #444;
+}
+
+/* Executive */
+.executive-template .resume-header {
+    background: #19365c;
+    color: white;
+    padding: 25px;
+    border: 0;
+}
+
+.executive-template .resume-contact {
+    color: #e1e9f4;
+}
+
+.executive-template .resume-role,
+.executive-template .resume-section h3 {
+    color: #19365c;
+}
+
+/* Creative */
+.creative-template .resume-header {
+    background: #f6eef7;
+    padding: 25px;
+    border-left: 7px solid #a14e8d;
+    border-bottom: 0;
+}
+
+.creative-template .resume-header h1,
+.creative-template .resume-role,
+.creative-template .resume-section h3 {
+    color: #873c78;
+}
+
+/* Compact ATS */
+.compact-template {
+    padding: 30px;
+}
+
+.compact-template .resume-header {
+    text-align: center;
+    border-color: #333;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.compact-template .resume-header h1 {
+    font-size: 25px;
+}
+
+.compact-template .resume-section {
+    margin: 13px 0;
+}
+
+.compact-template .resume-section h3 {
+    color: #222;
+    font-size: 12px;
+    padding-bottom: 4px;
+    margin-bottom: 7px;
+}
+
+.compact-template .resume-section p,
+.compact-template .resume-skills li {
+    font-size: 11px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #102e20;
+    color: #d9e7dd;
+    padding: 50px 7% 25px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-brand {
+    color: white;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer-content > p {
+    color: #b6c9bb;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+
+.footer-links a {
+    color: #d9e7dd;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-content > small {
+    color: #94ad9b;
+    font-size: 11px;
+}
+
+/* =========================================
+   LANGUAGE WIDGET
+========================================= */
+
+.language-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 900;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 8px 13px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-widget select {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* =========================================
+   TOAST NOTIFICATION
+========================================= */
+
+.toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    z-index: 2000;
+    background: #173c2b;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+    max-width: calc(100% - 30px);
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .builder-layout {
+        grid-template-columns: minmax(0, 1fr) 250px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+    .nav-container {
+        flex-wrap: wrap;
+        padding: 12px 18px;
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 7px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: var(--light-green);
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-visual {
+        min-height: 370px;
+    }
+
+    .floating-note {
+        right: 0;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .builder-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .builder-sidebar {
+        position: static;
+    }
+
+    .resume-form {
+        padding: 22px 17px;
+    }
+
+    .resume-preview {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .preview-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .preview-buttons {
+        width: 100%;
+    }
+
+    .preview-buttons button {
+        flex: 1;
+    }
+
+    .resume-preview {
+        padding: 17px;
+    }
+
+    .resume-header h1 {
+        font-size: 25px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-points {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .form-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .language-widget {
+        bottom: 12px;
+        right: 12px;
+    }
+}
+
+/* =========================================
+   PRINT / SAVE AS PDF
+========================================= */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    #resumePreview,
+    #resumePreview * {
+        visibility: visible !important;
+    }
+
+    #resumePreview {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+
+    .resume-document {
+        width: 100%;
+        color: black !important;
+    }
+
+    .resume-section,
+    .resume-header {
+        page-break-inside: avoid;
+    }
+
+    .resume-preview .empty-preview {
+        display: none !important;
+    }
+}

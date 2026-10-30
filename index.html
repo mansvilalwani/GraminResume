@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a professional resume easily with GraminResume.">
+    <title>GraminResume - Build Your Future</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="brand">
+            <span class="brand-icon">G</span>
+            <span>Gramin<span class="green">Resume</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#builder" class="nav-link">Create Resume</a>
+            <a href="#templates" class="nav-link">Templates</a>
+            <a href="#preview" class="nav-link">Preview</a>
+        </div>
+
+        <a href="#builder" class="nav-button">Build My Resume →</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="eyebrow">YOUR CAREER STARTS HERE</span>
+        <h1>Build Your Future With a <span class="green">Better Resume.</span></h1>
+        <p>Create a professional resume in minutes. Simple, accessible and designed
+           to help students and job seekers present their skills confidently.</p>
+
+        <div class="hero-actions">
+            <a href="#builder" class="primary-button">Create My Resume →</a>
+            <a href="#features" class="secondary-button">Explore Features</a>
+        </div>
+
+        <div class="hero-points">
+            <span>✓ Easy to use</span>
+            <span>✓ Free to create</span>
+            <span>✓ Save as PDF</span>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="visual-card">
+            <div class="visual-top">
+                <span class="visual-avatar">R</span>
+                <div>
+                    <strong>Resume Preview</strong>
+                    <small>Professional profile</small>
+                </div>
+                <span class="verified">✓</span>
+            </div>
+            <div class="visual-line long"></div>
+            <div class="visual-line medium"></div>
+            <div class="visual-heading">EDUCATION</div>
+            <div class="visual-line long"></div>
+            <div class="visual-line short"></div>
+            <div class="visual-heading">SKILLS</div>
+            <div class="skill-pills">
+                <span>Communication</span>
+                <span>Computer</span>
+                <span>Teamwork</span>
+            </div>
+            <div class="visual-heading">EXPERIENCE</div>
+            <div class="visual-line long"></div>
+            <div class="visual-line medium"></div>
+            <div class="visual-footer">✦ Ready for new opportunities</div>
+        </div>
+        <div class="floating-note">✦ Your career, your story!</div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section features-section" id="features">
+    <div class="section-heading">
+        <span class="eyebrow">WHY GRAMINRESUME?</span>
+        <h2>Everything You Need to Get Started</h2>
+        <p>Build a resume without complicated tools or design skills.</p>
+    </div>
+
+    <div class="feature-grid">
+        <article class="feature-card">
+            <div class="feature-icon">✍️</div>
+            <h3>Easy Resume Creation</h3>
+            <p>Enter your details in a simple form and create your professional resume.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Multiple Templates</h3>
+            <p>Choose from different resume designs to match your preferences.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>Multiple Languages</h3>
+            <p>Use the available English, Marathi and Hindi interface translations.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">📄</div>
+            <h3>PDF Ready</h3>
+            <p>Print your resume or save it as a PDF using your browser.</p>
+        </article>
+    </div>
+</section>
+
+<!-- BUILDER -->
+<section class="section builder-section" id="builder">
+    <div class="section-heading">
+        <span class="eyebrow">LET'S GET STARTED</span>
+        <h2>Create Your Professional Resume</h2>
+        <p>Fill in your information. Your resume preview will be generated below.</p>
+    </div>
+
+    <div class="builder-layout">
+        <form id="resumeForm" class="resume-form">
+
+            <div class="form-heading">
+                <div>
+                    <h3>Your Information</h3>
+                    <p>Fields marked with * are required.</p>
+                </div>
+                <span class="form-step">01 / PROFILE</span>
+            </div>
+
+            <!-- PERSONAL DETAILS -->
+            <div class="form-section">
+                <h3><span>01</span> Personal Details</h3>
+
+                <div class="form-grid">
+                    <label class="full-width">Full Name *
+                        <input type="text" id="fullName" placeholder="Enter your full name" required>
+                    </label>
+
+                    <label>Phone Number
+                        <input type="tel" id="phone" placeholder="Your phone number">
+                    </label>
+
+                    <label>Email Address
+                        <input type="email" id="email" placeholder="example@email.com">
+                    </label>
+
+                    <label>Location
+                        <input type="text" id="location" placeholder="City, State">
+                    </label>
+
+                    <label>Languages Known
+                        <input type="text" id="languages" placeholder="English, Hindi, Marathi">
+                    </label>
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="form-section">
+                <h3><span>02</span> Education</h3>
+
+                <div class="form-grid">
+                    <label class="full-width">Qualification
+                        <input type="text" id="education" placeholder="e.g. Diploma in Computer Engineering">
+                    </label>
+
+                    <label>Institution Name
+                        <input type="text" id="institution" placeholder="College or school name">
+                    </label>
+
+                    <label>Passing Year
+                        <input type="text" id="passingYear" placeholder="e.g. 2026">
+                    </label>
+
+                    <label class="full-width">Percentage / CGPA
+                        <input type="text" id="grade" placeholder="e.g. 85%">
+                    </label>
+                </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="form-section">
+                <h3><span>03</span> Skills</h3>
+                <p class="helper-text">Select your skills. You can select multiple options.</p>
+
+                <div class="skill-category">
+                    <h4>Computer & Office</h4>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="skills" value="MS Word"> MS Word</label>
+                        <label><input type="checkbox" name="skills" value="MS Excel"> MS Excel</label>
+                        <label><input type="checkbox" name="skills" value="PowerPoint"> PowerPoint</label>
+                        <label><input type="checkbox" name="skills" value="Typing"> Typing</label>
+                        <label><input type="checkbox" name="skills" value="Internet Skills"> Internet Skills</label>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Programming & Technology</h4>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="Java"> Java</label>
+                        <label><input type="checkbox" name="skills" value="Python"> Python</label>
+                        <label><input type="checkbox" name="skills" value="C Programming"> C Programming</label>
+                        <label><input type="checkbox" name="skills" value="SQL"> SQL</label>
+                        <label><input type="checkbox" name="skills" value="Troubleshooting"> Troubleshooting</label>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Professional Skills</h4>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="skills" value="Communication"> Communication</label>
+                        <label><input type="checkbox" name="skills" value="Teamwork"> Teamwork</label>
+                        <label><input type="checkbox" name="skills" value="Problem Solving"> Problem Solving</label>
+                        <label><input type="checkbox" name="skills" value="Leadership"> Leadership</label>
+                        <label><input type="checkbox" name="skills" value="Time Management"> Time Management</label>
+                        <label><input type="checkbox" name="skills" value="Adaptability"> Adaptability</label>
+                    </div>
+                </div>
+
+                <label class="custom-skills-label">Other Skills
+                    <input type="text" id="customSkills" placeholder="Enter other skills separated by commas">
+                </label>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="form-section">
+                <h3><span>04</span> Work Experience</h3>
+
+                <label class="fresher-option">
+                    <input type="checkbox" id="isFresher">
+                    I am a fresher / I have no work experience
+                </label>
+
+                <div id="experienceFields">
+                    <div class="form-grid">
+                        <label>Job Title
+                            <input type="text" id="jobTitle" placeholder="Your job title">
+                        </label>
+
+                        <label>Company / Organization
+                            <input type="text" id="workplace" placeholder="Company name">
+                        </label>
+
+                        <label class="full-width">Experience Description
+                            <textarea id="experienceDetails" rows="4" placeholder="Describe your responsibilities and experience"></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="form-section">
+                <h3><span>05</span> Projects</h3>
+                <label>Project Details
+                    <textarea id="projects" rows="4" placeholder="Project name, technologies used and description"></textarea>
+                </label>
+            </div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="form-section">
+                <h3><span>06</span> Certifications & Courses</h3>
+                <label>Certifications
+                    <textarea id="certifications" rows="3" placeholder="Enter your courses, certificates or training"></textarea>
+                </label>
+            </div>
+
+            <!-- ADDITIONAL DETAILS -->
+            <div class="form-section">
+                <h3><span>07</span> Additional Details</h3>
+
+                <div class="form-grid">
+                    <label>Desired Job Role
+                        <input type="text" id="jobRole" placeholder="e.g. Junior Computer Operator">
+                    </label>
+
+                    <label>Hobbies & Interests
+                        <input type="text" id="hobbies" placeholder="Reading, sports, etc.">
+                    </label>
+
+                    <label class="full-width">Career Objective / About Me
+                        <textarea id="objective" rows="4" placeholder="Write a short professional introduction"></textarea>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="secondary-button" id="sampleButton">✦ Load Sample</button>
+                <button type="reset" class="clear-button" id="clearButton">Clear Form</button>
+                <button type="submit" class="primary-button">Generate Resume →</button>
+            </div>
+        </form>
+
+        <!-- TEMPLATE SIDEBAR -->
+        <aside class="builder-sidebar" id="templates">
+            <div class="sidebar-card">
+                <span class="eyebrow">MAKE IT YOURS</span>
+                <h3>Choose Your Template</h3>
+                <p>Select a design for your resume preview.</p>
+
+                <label for="templateSelect">Resume Design</label>
+                <select id="templateSelect">
+                    <option value="classic">Classic Professional</option>
+                    <option value="modern">Modern Green</option>
+                    <option value="simple">Simple Black & White</option>
+                    <option value="executive">Executive Navy</option>
+                    <option value="creative">Creative Accent</option>
+                    <option value="compact">Compact ATS Friendly</option>
+                </select>
+
+                <div class="template-mini-grid">
+                    <div class="mini-template classic-mini">
+                        <div></div><span></span><span></span><span></span>
+                        <small>Classic</small>
+                    </div>
+                    <div class="mini-template modern-mini">
+                        <div></div><span></span><span></span><span></span>
+                        <small>Modern</small>
+                    </div>
+                    <div class="mini-template executive-mini">
+                        <div></div><span></span><span></span><span></span>
+                        <small>Executive</small>
+                    </div>
+                    <div class="mini-template creative-mini">
+                        <div></div><span></span><span></span><span></span>
+                        <small>Creative</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-tip">
+                <span>💡</span>
+                <div>
+                    <strong>Resume Tip</strong>
+                    <p>Use clear information and relevant skills. Keep your resume easy to read.</p>
+                </div>
+            </div>
+
+            <div class="privacy-note">
+                <span>🔒</span>
+                <p>Your information is processed in your browser. This version does not upload it to an online database.</p>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- PREVIEW -->
+<section class="section preview-section" id="preview">
+    <div class="section-heading">
+        <span class="eyebrow">YOUR FINAL RESULT</span>
+        <h2>Your Resume Preview</h2>
+        <p>Review your information before printing or saving your resume.</p>
+    </div>
+
+    <div class="preview-toolbar">
+        <div>
+            <strong>Live Resume Preview</strong>
+            <p id="previewStatus">Your resume will appear here.</p>
+        </div>
+
+        <div class="preview-buttons">
+            <button type="button" class="secondary-button" id="printButton">🖨 Print</button>
+            <button type="button" class="primary-button" id="downloadButton">↓ Save as PDF</button>
+        </div>
+    </div>
+
+    <div id="resumePreview" class="resume-preview classic-template">
+        <div class="empty-preview">
+            <div class="empty-icon">📄</div>
+            <h2>Your Resume Will Appear Here</h2>
+            <p>Complete the form and click Generate Resume to see your professional resume.</p>
+            <a href="#builder" class="primary-button">Start Creating →</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <a href="#home" class="brand footer-brand">
+            <span class="brand-icon">G</span>
+            <span>Gramin<span class="green">Resume</span></span>
+        </a>
+        <p>Making professional resume creation simpler and more accessible.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#builder">Create Resume</a>
+        </div>
+        <small>© 2026 GraminResume. All rights reserved.</small>
+    </div>
+</footer>
+
+<!-- LANGUAGE SELECTOR -->
+<div class="language-widget">
+    <span>🌐</span>
+    <select id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="mr">मराठी</option>
+        <option value="hi">हिन्दी</option>
+    </select>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
